@@ -1,0 +1,160 @@
+
+.tandc {
+  background-color: #a1a1a1;
+  width: 500px;
+  height: 80px;
+  overflow:scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: inline-block;
+}
+
+.spin {
+  width: 20px;
+  color: blue;
+}
+
+.brown {
+  color: brown;
+}
+
+/* LIST BOX FOR SEARCH RESULTS */
+.searchlistbox {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+.searchlist {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchlist li p {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  margin-bottom: 0px;
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 2px; /*Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px; /*Increase the font-size */
+  cursor: pointer;
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+.searchlist li p {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+#menu-outer {
+	height: 84px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+.horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+
+.horizontal-list li {
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background-color: #9bb0d1;
+  padding: 5px;
+	display: inline;
+}
+
+.horizontal-list li span {
+  cursor: pointer;
+}
+
+
+.map {
+  height: 200px;
+  width: 100%;
+}
+
+/*
+#marker {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #088;
+  border-radius: 10px;
+  background-color: #0FF;
+  opacity: 0.5;
+}*/
+
+.pin {
+  margin-top: 40px;
+	background: transparent;
+	display: inline-block;
+	border-radius: 14px 14px 14px 0;
+	width: 8px;
+	height: 8px;
+	border: 6px solid #f33;
+	transform: rotate(-45deg);
+	position: relative;
+	box-shadow: -1px 1px 2px rgba(0,0,0,.2);
+}
+
+
+
+.navbar-custom {
+    color: #ffffff;
+    background-color: #5832a8;
+}
+
+.nav a {
+  color: #ffffff;
+  margin-top:11px;
+}
+
+/*Need to change the brand color below */
+.navbar-brand {
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.navbar-brand:hover {
+  color: #ffffff;
+}
+
+.navbar-nav > li > a:hover{
+  color:ffffff;
+  background-color:#8cb0cf !important;
+}
+
+path {
+  fill: #ffffff;
+}
+
+.bubblerow {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  /*border: 2px solid #007bff;*/
+  padding: 5px;
+  background-color: #e9ebee;
+}
+
+.bubblerowwhite {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  /*border: 2px solid #007bff;*/
+  padding: 5px;
+  background-color: #f5f7fa;
+}

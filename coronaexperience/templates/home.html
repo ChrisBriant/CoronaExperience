@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row">
+      <div class="col-lg-12"><h1>#medicalfreedom Latest Tweets</h1></div>
+    </div>
+      <form method="POST" class="form-inline" action="">
+        <fieldset class="form-group">
+          {{ form.hidden_tag() }} <!-- csrf token -->
+           <div class="row bubblerow">
+            <div class="col-sm-2">{{ form.dateuntil.label(class="form-control-label") }}</div>
+            <div class="col-sm-4">{{ form.dateuntil(class="form-control-md dp",style="width:8em;") }}</div>
+            <div class="col-sm-1">{{ form.submit(class="btn btn-primary") }}</div>
+           </div><br/>
+         </fieldset>
+      </form>
+      <div class="row bubblerow">
+        <div class="col-md-12">
+          <div class="row bubblerowwhite">
+            <div class="col-md-2"><strong>Date Created</strong></div>
+            <div class="col-md-6"><strong>Text</strong></div>
+            <div class="col-md-2"><strong>Screen Name</strong></div>
+            <div class="col-md-2"><strong>User Name</strong></div>
+          </div>
+          {% for tweet in tweets %}
+          <div class="row bubblerowwhite">
+            <div class="col-md-2"><a href="/{{ tweet.id }}">{{ tweet.created_at }}</a></div>
+            <div class="col-md-6">{{ tweet.text }}</div>
+            <div class="col-md-2">{{ tweet.screen_name }}</div>
+            <div class="col-md-2">{{ tweet.name }}</div>
+          </div>
+          {% if tweet.urls %}
+          <div class="row bubblerowwhite">
+            <div class="col-md-12">
+                <div class="row"><div class="col-md-12"><p><strong>Links</strong></p></div></div>
+                {% for url in tweet.urls %}
+                  <div class="row"><div class="col-md-12"><a href="{{ url.expanded_url }}">{{ url.expanded_url }}</a></div></div>
+                {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+{% endblock content %}
